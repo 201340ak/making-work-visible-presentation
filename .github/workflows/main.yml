@@ -1,0 +1,15 @@
+name: Build Marp Presentation
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: marp-team/marp-cli-action@v2
+        with:
+          input: azure_devops_presentation.md
+          output: docs/index.html

@@ -52,13 +52,6 @@ theme: default
 
 ---
 
-## 🧪 Linking Test Cases
-
-- Associate test cases with PBIs
-- Track test coverage and results directly in the board
-
----
-
 ## 🚀 Reporting Release Stages
 
 - Use **Release Pipelines** to:
@@ -73,8 +66,14 @@ theme: default
 - Walkthrough of:
   - Commit tagging
   - Branch linking
-  - Test case association
   - Release tracking
+
+---
+
+
+## 🙅 Test Plan
+
+- Did not cover Test Plans and associating with PBIs
 
 ---
 

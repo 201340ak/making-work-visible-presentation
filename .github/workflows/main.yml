@@ -22,7 +22,7 @@ jobs:
         run: mkdir -p docs
 
       - name: Convert Markdown to HTML
-        run: marp azure_devops_presentation.md --html --output docs/index.html
+        run: marp ./azure_devops_presentation.md --html --output docs/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

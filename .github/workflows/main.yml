@@ -10,11 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Convert Markdown to HTML using Marp
-        uses: KoharaKazuya/marp-cli-action@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          input: azure_devops_presentation.md
-          output: docs/index.html
+          node-version: '20'
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Create docs folder
+        run: mkdir -p docs
+
+      - name: Convert Markdown to HTML
+        run: marp azure_devops_presentation.md --html --output docs/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

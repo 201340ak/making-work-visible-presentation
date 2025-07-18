@@ -20,6 +20,10 @@ jobs:
 
       - name: Create docs folder
         run: mkdir -p docs
+        
+      - name: List files
+        run: ls -R
+
 
       - name: Convert Markdown to HTML
         run: marp ./azure_devops_presentation.md --html --output docs/index.html
